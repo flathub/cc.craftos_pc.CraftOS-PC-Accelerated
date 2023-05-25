@@ -72,7 +72,7 @@ modules:
         commit: eae5d963983f5187a1bc39a9c0bd5f5ed2d1ed26
         x-checker-data:
           type: git
-          tag-pattern: ^v([\d.]+)$
+          tag-pattern: ^v([\d.]+)-luajit$
           is-main-source: true
 
   - name: craftos2-resources

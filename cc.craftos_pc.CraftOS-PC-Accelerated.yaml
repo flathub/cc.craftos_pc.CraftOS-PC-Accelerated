@@ -68,8 +68,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/MCJack123/craftos2.git
-        tag: v2.7.4-luajit
-        commit: eae5d963983f5187a1bc39a9c0bd5f5ed2d1ed26
+        tag: v2.7.4
+        commit: 369b05405576ce78510f3e6d02b3c27d49cc0b75
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -79,8 +79,8 @@ modules:
     buildsystem: simple
     build-commands:
       - install -D -m 0644 CraftOS-PC.desktop "/app/share/applications/CraftOS-PC-Accelerated.desktop"
-      - desktop-file-edit --set-icon="cc.craftos_pc.CraftOS-PC-Accelerated" --set-key="Exec" --set-value="craftos-luajit"
-        /app/share/applications/CraftOS-PC-Accelerated.desktop
+      - desktop-file-edit --set-icon="cc.craftos_pc.CraftOS-PC-Accelerated" --set-key="Exec"
+        --set-value="craftos-luajit" /app/share/applications/CraftOS-PC-Accelerated.desktop
       - install -D -m 0644 256.png "/app/share/icons/hicolor/256x256/apps/cc.craftos_pc.CraftOS-PC-Accelerated.png"
       - install -D -m 0644 appdata.xml /app/share/appdata/CraftOS-PC-Accelerated.appdata.xml
       - sed -i 's/cc.craftos-pc.CraftOS-PC/cc.craftos_pc.CraftOS-PC/' /app/share/appdata/CraftOS-PC-Accelerated.appdata.xml

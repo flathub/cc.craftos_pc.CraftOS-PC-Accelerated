@@ -1,0 +1,3 @@
+export SDL_VIDEO_WAYLAND_WMCLASS=cc.craftos_pc.CraftOS-PC-Accelerated
+
+exec '/app/bin/craftos-luajit' "$@"

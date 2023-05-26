@@ -81,6 +81,7 @@ modules:
       - install -D -m 0644 CraftOS-PC.desktop "/app/share/applications/CraftOS-PC-Accelerated.desktop"
       - desktop-file-edit --set-icon="cc.craftos_pc.CraftOS-PC-Accelerated" --set-key="Exec" --set-value="start-craftos %F"
         /app/share/applications/CraftOS-PC-Accelerated.desktop
+      - install -D -m 0755 start-craftos /app/bin/start-craftos
       - install -D -m 0644 256.png "/app/share/icons/hicolor/256x256/apps/cc.craftos_pc.CraftOS-PC-Accelerated.png"
       - install -D -m 0644 appdata.xml /app/share/appdata/CraftOS-PC-Accelerated.appdata.xml
       - sed -i 's/cc.craftos-pc.CraftOS-PC/cc.craftos_pc.CraftOS-PC/' /app/share/appdata/CraftOS-PC-Accelerated.appdata.xml

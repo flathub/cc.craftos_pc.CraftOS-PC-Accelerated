@@ -2,7 +2,7 @@ app-id: cc.craftos_pc.CraftOS-PC-Accelerated
 runtime: org.freedesktop.Platform
 runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
-command: craftos-luajit
+command: start-craftos
 
 cleanup:
   - /include
@@ -79,8 +79,9 @@ modules:
     buildsystem: simple
     build-commands:
       - install -D -m 0644 CraftOS-PC.desktop "/app/share/applications/CraftOS-PC-Accelerated.desktop"
-      - desktop-file-edit --set-icon="cc.craftos_pc.CraftOS-PC-Accelerated" --set-key="Exec" --set-value="craftos-luajit"
+      - desktop-file-edit --set-icon="cc.craftos_pc.CraftOS-PC-Accelerated" --set-key="Exec" --set-value="start-craftos %F"
         /app/share/applications/CraftOS-PC-Accelerated.desktop
+      - install -D -m 0755 start-craftos /app/bin/start-craftos
       - install -D -m 0644 256.png "/app/share/icons/hicolor/256x256/apps/cc.craftos_pc.CraftOS-PC-Accelerated.png"
       - install -D -m 0644 appdata.xml /app/share/appdata/CraftOS-PC-Accelerated.appdata.xml
       - sed -i 's/cc.craftos-pc.CraftOS-PC/cc.craftos_pc.CraftOS-PC/' /app/share/appdata/CraftOS-PC-Accelerated.appdata.xml
@@ -93,6 +94,8 @@ modules:
         sha256: 29b78836844f58654740b7818bdbac59d7759db267d5c2a1ecdd4ce35fc03983
       - type: patch
         path: appstream.patch
+      - type: file
+        path: start-craftos
 
   - name: craftos2-rom
     buildsystem: simple

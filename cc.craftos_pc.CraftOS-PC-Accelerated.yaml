@@ -79,8 +79,8 @@ modules:
     buildsystem: simple
     build-commands:
       - install -D -m 0644 CraftOS-PC.desktop "/app/share/applications/CraftOS-PC-Accelerated.desktop"
-      - desktop-file-edit --set-icon="cc.craftos_pc.CraftOS-PC-Accelerated" --set-key="Exec" --set-value="start-craftos %F"
-        /app/share/applications/CraftOS-PC-Accelerated.desktop
+      - desktop-file-edit --set-icon="cc.craftos_pc.CraftOS-PC-Accelerated" --set-key="Exec"
+        --set-value="start-craftos %F" /app/share/applications/CraftOS-PC-Accelerated.desktop
       - install -D -m 0755 start-craftos /app/bin/start-craftos
       - install -D -m 0644 256.png "/app/share/icons/hicolor/256x256/apps/cc.craftos_pc.CraftOS-PC-Accelerated.png"
       - install -D -m 0644 appdata.xml /app/share/appdata/CraftOS-PC-Accelerated.appdata.xml
@@ -105,8 +105,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/MCJack123/craftos2-rom.git
-        tag: v2.7.4
-        commit: 7e84ee2ace1ae740e2a33a8b6c5e93213a192205
+        tag: v2.7.5
+        commit: 64b1a9b881c9b1954e42616b642a1f475deabf7b
 
         x-checker-data:
           type: git

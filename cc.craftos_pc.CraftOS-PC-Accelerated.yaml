@@ -68,8 +68,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/MCJack123/craftos2.git
-        tag: v2.7.4-luajit
-        commit: eae5d963983f5187a1bc39a9c0bd5f5ed2d1ed26
+        tag: v2.7.5-luajit
+        commit: 1853f1e7eee1a17f6fdb413f32c1f0f51355b51d
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)-luajit$
@@ -105,8 +105,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/MCJack123/craftos2-rom.git
-        tag: v2.7.5
-        commit: 64b1a9b881c9b1954e42616b642a1f475deabf7b
+        tag: v2.7.5.1
+        commit: 9881064c28c6de4433a53a32c084e9e566df2310
 
         x-checker-data:
           type: git

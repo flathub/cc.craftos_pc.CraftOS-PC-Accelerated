@@ -69,7 +69,7 @@ modules:
       - type: git
         url: https://github.com/MCJack123/craftos2.git
         tag: v2.7.5-luajit
-        commit: 1853f1e7eee1a17f6fdb413f32c1f0f51355b51d
+        commit: 7f17159257a5ea1462f21862389a50b127397db8
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)-luajit$

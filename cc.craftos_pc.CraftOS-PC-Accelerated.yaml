@@ -105,8 +105,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/MCJack123/craftos2-rom.git
-        tag: v2.7.5.1
-        commit: 9881064c28c6de4433a53a32c084e9e566df2310
+        tag: v2.8
+        commit: 9b713fe4c30026a7e67038b22f82d87db5c851e5
 
         x-checker-data:
           type: git

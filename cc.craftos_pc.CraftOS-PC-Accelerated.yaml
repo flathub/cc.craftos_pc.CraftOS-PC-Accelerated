@@ -78,7 +78,7 @@ modules:
 
       # https://github.com/MCJack123/craftos2/issues/237
       - install -D -m 755 craftos2-luajit/src/libluajit-craftos.so /app/lib/libluajit-craftos.so
-      - patchelf --replace-needed craftos2-luajit/src/libluajit-craftos.so libluajit-craftos.so craftos-luajit
+      - patchelf --replace-needed craftos2-luajit/src/libluajit-craftos.so libluajit-craftos.so craftos
       
       - install -D -m 755 craftos /app/bin/craftos-luajit
     sources:

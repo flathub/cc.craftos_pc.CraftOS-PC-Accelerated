@@ -78,8 +78,9 @@ modules:
 
       # https://github.com/MCJack123/craftos2/issues/237
       - install -D -m 755 craftos2-luajit/src/libluajit-craftos.so /app/lib/libluajit-craftos.so
-      - patchelf --replace-needed craftos2-luajit/src/libluajit-craftos.so libluajit-craftos.so craftos
-      
+      - patchelf --replace-needed craftos2-luajit/src/libluajit-craftos.so libluajit-craftos.so
+        craftos
+
       - install -D -m 755 craftos /app/bin/craftos-luajit
     sources:
       - type: git
@@ -121,8 +122,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/MCJack123/craftos2-rom.git
-        tag: v2.8
-        commit: 9b713fe4c30026a7e67038b22f82d87db5c851e5
+        tag: v2.8.1
+        commit: 64facf5a3bff293a5905abd4bf4a235133190171
 
         x-checker-data:
           type: git

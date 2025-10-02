@@ -1,6 +1,6 @@
 app-id: cc.craftos_pc.CraftOS-PC-Accelerated
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: start-craftos
 
@@ -36,16 +36,16 @@ modules:
       - -DENABLE_PAGECOMPILER_FILE2PAGE=OFF
     sources:
       - type: archive
-        url: https://pocoproject.org/releases/poco-1.12.4/poco-1.12.4-all.tar.bz2
-        sha256: 4e6ccc0df904596478414ef56a992cf885eb4b0ee695b23d307eb2ff91c36626
+        url: https://pocoproject.org/releases/poco-1.14.2/poco-1.14.2-all.tar.bz2
+        sha256: 7738a4c880f08e89318fc53915f86be5a0e70f14eb1e7f0e1767c8781c40d794
 
   - name: libharu
     buildsystem: cmake-ninja
     sources:
       - type: git
         url: https://github.com/libharu/libharu.git
-        tag: v2.4.3
-        commit: 8dbcfe470581edc4bc52c3ef132d410e66cadc20
+        tag: v2.4.5
+        commit: 8fe5a738541a04642885fb7a75b2b5b9c5b416fa
 
   - name: pngpp
     buildsystem: simple
@@ -56,8 +56,6 @@ modules:
         url: http://download.savannah.nongnu.org/releases/pngpp/png++-0.2.10.tar.gz
         sha512: c54a74c0c20212bd0dcf86386c0c11dd824ad14952917ba0ff4c184b6547744458728a4f06018371acb7d5b842b641708914ccaa81bad8e72e173903f494ca85
 
-  - shared-modules/SDL2/SDL2-with-libdecor.json
-
   # Needed at build-time only
   - name: patchelf
     buildsystem: autotools
@@ -66,8 +64,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/NixOS/patchelf.git
-        tag: 0.17.2
-        commit: 5908e16cd562bcb1909be4de0409c4912a8afc52
+        tag: 0.18.0
+        commit: 99c24238981b7b1084313aca8f5c493bb46f302c
 
   - name: craftos2
     buildsystem: simple
@@ -91,6 +89,8 @@ modules:
           type: git
           tag-pattern: ^v([\d.]+)-luajit$
           is-main-source: true
+      - type: patch
+        path: patches/fix-poco-header-includes.patch
 
   - name: craftos2-resources
     buildsystem: simple
